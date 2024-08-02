@@ -1,0 +1,23 @@
+<div class="row" *ngIf="post">
+    <div class="col-8 offset-2">
+        <div>
+            <button class="btn btn-primary mb-5" routerLink='/posts'><i class="fa fa-return"></i> Go back to all posts</button>
+        </div>
+        <div class="card text-center">
+            <h4>{{post.title}}</h4>
+            <div class="card-body">
+                <div>
+                    <strong>Content</strong>
+                    <p>{{post.content}}</p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <p>Created on {{post.created | date:'fullDate'}}</p>
+                <div class="btn-group d-flex">
+                    <button class="btn btn-primary">Like</button>
+                    <button class="btn btn-success">Comment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

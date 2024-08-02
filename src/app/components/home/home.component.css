@@ -1,0 +1,8 @@
+.carousel {
+    margin-bottom: 5px;
+}
+
+.carousel img {
+    height: 400px;
+    max-width: 1080px;
+}

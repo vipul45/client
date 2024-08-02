@@ -1,0 +1,19 @@
+<h1 class="heading">My posts</h1>
+<div class="row" *ngIf="posts">
+    <div *ngFor="let post of posts" class="col-4">
+        <div class="card mb-4">
+            <h5 class="card-header">{{post.title}}</h5>
+            <div class="card-body">
+                <h6 class="card-title">{{post.created | date}}</h6>
+                <p class="card-text">{{post.content}}</p>
+                <div class="btn-group d-flex">
+                    <button class="btn btn-info ml-2">Edit post</button>
+                    <button class="btn btn-info ml-3" (click)="deletePost(post.id)">Delete post</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" *ngIf="!posts">
+    <h1>You dont have any posts as of now</h1>
+</div>
